@@ -16,7 +16,6 @@ import android.widget.Toast;
 
 import com.example.wimblebuddy.R;
 import com.example.wimblebuddy.database.model.Gamecard;
-import com.example.wimblebuddy.database.repository.GamecardRepository;
 import com.example.wimblebuddy.viewmodel.HomeViewModel;
 
 import java.text.SimpleDateFormat;
@@ -156,9 +155,6 @@ public class CreateGameFragment extends DialogFragment {
             mViewModel.insert(newCard);
             Toast.makeText(getActivity(), getString(R.string.fragment_create_game_succes),
                     Toast.LENGTH_LONG).show();
-//            Bundle args = new Bundle();
-//            args.putSerializable("Gamecard", newCard);
-//            getTargetFragment().setArguments(args);
             dismiss();
         } else {
             Toast.makeText(getActivity(), getString(R.string.fragment_create_game_error_info),

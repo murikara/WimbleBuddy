@@ -19,9 +19,15 @@
     <string name="fragment_create_game_succes">Game succesvol gepland!</string>
     <string name="fragment_create_game_timepicker_title">Selecteer Tijd</string>
 
-    <!-- CreateGameFragment  -->
+    <!-- HomeFragment  -->
     <string name="fragment_home_text_date">--/--/----</string>
     <string name="fragment_home_text_time">00:00 – 00:00</string>
     <string name="fragment_home_text_location">Locatie</string>
     <string name="fragment_home_text_players">0/2</string>
+
+    <!-- DeleteGameFragment -->
+    <string name="fragment_delete_text_delete_button">Yes :(</string>
+    <string name="fragment_delete_text_keep_button">No :)</string>
+    <string name="fragment_delete_game_succes">Game geannuleerd!</string>
+    <string name="fragment_delete_game_error">Fout bij het annuleren, probeer opnieuw.</string>
 </resources>

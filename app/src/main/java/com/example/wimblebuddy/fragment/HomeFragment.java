@@ -83,7 +83,8 @@ public class HomeFragment extends Fragment implements GamecardAdapter.GamecardCl
     }
 
     @OnClick(R.id.createGameButton_Home)
-    public void createDialogFragment(){
+    public void createGameDialogFragment(){
+        assert getFragmentManager() != null;
         FragmentTransaction ft = getFragmentManager().beginTransaction();
         Fragment prev = getFragmentManager().findFragmentByTag("dialog");
         if (prev != null) {
@@ -93,7 +94,6 @@ public class HomeFragment extends Fragment implements GamecardAdapter.GamecardCl
 
         DialogFragment createGameFragment = new CreateGameFragment();
         createGameFragment.show(ft, "createGame");
-
     }
 
     /**
@@ -116,7 +116,25 @@ public class HomeFragment extends Fragment implements GamecardAdapter.GamecardCl
 
     @Override
     public void GamecardOnClick(int i) {
+        Gamecard card = mCards.get(i);
+        if(card != null) {
+            createDeleteGameDialogFragment(card);
+        } else {
+            Log.e(TAG, "GamecardOnClick: CARD is null" );
+        }
+    }
 
+    public void createDeleteGameDialogFragment(Gamecard card){
+        assert getFragmentManager() != null;
+        FragmentTransaction ft = getFragmentManager().beginTransaction();
+        Fragment prev = getFragmentManager().findFragmentByTag("dialog");
+        if (prev != null) {
+            ft.remove(prev);
+        }
+        ft.addToBackStack(null);
+
+        DialogFragment deleteGameFragment = DeleteGameFragment.newInstance(card);
+        deleteGameFragment.show(ft, "deleteGame");
     }
 
     //Retrieves data from the api

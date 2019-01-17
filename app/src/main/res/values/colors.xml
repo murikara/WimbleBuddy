@@ -7,5 +7,6 @@
     <color name="icon">#9f9d9d</color>
     <color name="iconFocus">#000</color>
     <color name="button">#25D366</color>
+    <color name="buttonDelete">#ff3232</color>
     <color name="gamecardBackground">#E8F8FC</color>
 </resources>

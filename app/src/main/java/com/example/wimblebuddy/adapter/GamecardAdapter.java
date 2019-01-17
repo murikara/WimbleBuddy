@@ -21,7 +21,7 @@ public class GamecardAdapter extends RecyclerView.Adapter<GamecardAdapter.Gameca
 
     private List<Gamecard> mGamecards;
     private static final String TAG = "GamecardAdapter";
-    private GamecardClickListener mGamecardClickListener;
+    private final GamecardClickListener mGamecardClickListener;
 
     public GamecardAdapter(List<Gamecard> mGamecards, GamecardClickListener mGamecardClickListener) {
         this.mGamecards = mGamecards;
@@ -78,7 +78,8 @@ public class GamecardAdapter extends RecyclerView.Adapter<GamecardAdapter.Gameca
 
         @Override
         public void onClick(View view) {
-
+            int clickedPosition = getAdapterPosition();
+            mGamecardClickListener.GamecardOnClick(clickedPosition);
         }
     }
 
