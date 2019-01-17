@@ -7,6 +7,8 @@
     <string name="search">Search</string>
     <string name="profile">Profile</string>
     <string name="plan_game">Plan een game</string>
+
+    <!-- CreateGameFragment  -->
     <string name="fragment_create_game_date">Datum</string>
     <string name="fragment_create_game_time_from">Van</string>
     <string name="fragment_create_game_time_till">Tot</string>
@@ -16,4 +18,10 @@
     <string name="fragment_create_game_error_info">Vul eerst alles in!</string>
     <string name="fragment_create_game_succes">Game succesvol gepland!</string>
     <string name="fragment_create_game_timepicker_title">Selecteer Tijd</string>
+
+    <!-- CreateGameFragment  -->
+    <string name="fragment_home_text_date">--/--/----</string>
+    <string name="fragment_home_text_time">00:00 – 00:00</string>
+    <string name="fragment_home_text_location">Locatie</string>
+    <string name="fragment_home_text_players">0/2</string>
 </resources>
